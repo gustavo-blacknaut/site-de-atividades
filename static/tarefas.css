@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.card {
+  background-color: #e8f4fd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e6091;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  margin-bottom: 15px;
+}
+
+.card-link {
+  color: #1e6091;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.no-activity {
+  font-style: italic;
+  color: #888;
+}
+
+.error-message {
+  color: #f00;
+  font-weight: bold;
+}
+
+.navbar {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+  background-color: #ffffff;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: 5cm;
+  margin-right: 5cm;
+}
+
+.esquerda {
+  display: flex;
+  align-items: center;
+  margin-left: 1cm;
+}
+
+.direita {
+  display: flex;
+  align-items: center;
+  margin-right: 1cm;
+}
+
+.esquerda ul,
+.direita ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.esquerda li,
+.direita li {
+  display: inline;
+  margin-right: 1cm;
+  color: #4995f2;
+}
+
+.logout {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .esquerda, .direita {
+    margin: 10px 0;
+  }
+  
+  .esquerda li,
+  .direita li {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .esquerda {
+    margin-left: 0;
+  }
+  
+  .direita {
+    margin-right: 0;
+  }
+  
+  .logout {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+}

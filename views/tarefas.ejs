@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="gustavo-blacknaut">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="title" content="Página de Atividades">
+  <meta name="theme-color" content="#f2f2f2">
+  <meta name="description" content="Olhe as atividades.">
+
+  <title>Atividades</title>
+  <link href="tarefas.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="navbar">
+    <div class="esquerda">
+      <ul>
+        <li>Painel de Atividades</li>
+      </ul>
+    </div>
+    <div class="direita">
+      <ul>
+        <li><%= username %></li>
+      </ul>
+      <ul>
+        <li>
+            <a href="/logout"><button class="logout">Logout</button></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <% if (eUmAluno) { %>
+    <% let hasAtividade = false; %>
+    <% atividades.forEach((atividade, index) => { %>
+      <% if (atividade) { %>
+        <% hasAtividade = true; %>
+        <div class="card">
+          <p class="card-title">Tarefa #<%= index + 1 %></p>
+          <div class="card-content">
+            <p>Título: <%= atividade.titulo %></p>
+            <p>Descrição: <%= atividade.descricao %></p>
+            <p>Link: <%= atividade.link %></p>
+          </div>
+        </div>
+      <% } %>
+    <% }); %>
+    <% if (!hasAtividade) { %>
+      <p class="card no-activity">Nenhuma atividade encontrada.</p>
+    <% } %>
+  <% } else { %>
+    <p class="card error-message">Você não é um aluno!</p>
+  <% } %>
+</body>
+</html>
